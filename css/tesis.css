@@ -1,15 +1,14 @@
-*{
-==========================================================================
-   Variables de Color - Tema Ambiental y AcadÃ©mico
+/* ==========================================================================
+   Variables de Color - Tema Ambiental y Académico
    ========================================================================== */
 :root {
     --bg-principal: #f4f9f5;      /* Fondo general: un verde-gris muy claro y limpio */
     --bg-tarjeta: #ffffff;        /* Fondo de las tarjetas: blanco puro */
-    --verde-principal: #2e7d32;   /* Verde bosque para tÃ­tulos y acentos principales */
+    --verde-principal: #2e7d32;   /* Verde bosque para títulos y acentos principales */
     --verde-acento: #4caf50;      /* Verde vibrante para detalles o botones */
-    --verde-claro: #e8f5e9;       /* Verde muy pÃ¡lido para fondos de bloques destacados */
+    --verde-claro: #e8f5e9;       /* Verde muy pálido para fondos de bloques destacados */
     --texto-oscuro: #2c3e50;      /* Gris azulado oscuro para el texto principal (mejor legibilidad que el negro) */
-    --texto-mutado: #607d8b;      /* Gris medio para subtÃ­tulos o metadatos */
+    --texto-mutado: #607d8b;      /* Gris medio para subtítulos o metadatos */
     --borde: #c8e6c9;             /* Verde suave para los bordes */
     --sombra: rgba(46, 125, 50, 0.08); /* Sombra con un sutil tono verde */
 }
@@ -90,7 +89,7 @@ header p strong {
 }
 
 /* ==========================================================================
-   TipografÃ­a y Encabezados
+   Tipografía y Encabezados
    ========================================================================== */
 h2 {
     border-left: 5px solid var(--verde-acento);
@@ -134,7 +133,7 @@ li strong {
 }
 
 /* ==========================================================================
-   Portada / Elementos de InformaciÃ³n
+   Portada / Elementos de Información
    ========================================================================== */
 .card-header {
     text-align: center;
@@ -159,7 +158,7 @@ li strong {
     letter-spacing: 1px;
 }
 
-/* Grid de informaciÃ³n (soporta la clase original del HTML: info-gird) */
+/* Grid de información (soporta la clase original del HTML: info-gird) */
 .info-gird {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -217,7 +216,7 @@ li strong {
 }
 
 /* ==========================================================================
-   Pie de PÃ¡gina (Footer)
+   Pie de Página (Footer)
    ========================================================================== */
 footer {
     text-align: center;
