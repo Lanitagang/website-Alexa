@@ -1,35 +1,35 @@
 /* ==========================================================================
-   Variables de Color - Tema Ambiental y Académico
+   Variables de Color - Tema: PRAE y Educación Ambiental
    ========================================================================== */
 :root {
-    --bg-principal: #f4f9f5;      /* Fondo general: un verde-gris muy claro y limpio */
-    --bg-tarjeta: #ffffff;        /* Fondo de las tarjetas: blanco puro */
-    --verde-principal: #2e7d32;   /* Verde bosque para títulos y acentos principales */
-    --verde-acento: #4caf50;      /* Verde vibrante para detalles o botones */
-    --verde-claro: #e8f5e9;       /* Verde muy pálido para fondos de bloques destacados */
-    --texto-oscuro: #2c3e50;      /* Gris azulado oscuro para el texto principal (mejor legibilidad que el negro) */
-    --texto-mutado: #607d8b;      /* Gris medio para subtítulos o metadatos */
-    --borde: #c8e6c9;             /* Verde suave para los bordes */
-    --sombra: rgba(46, 125, 50, 0.08); /* Sombra con un sutil tono verde */
+    --bg-principal: #f4f7f6;      /* Fondo general gris-verdoso muy claro y limpio */
+    --bg-tarjeta: #ffffff;        /* Fondo blanco para los paneles de contenido */
+    --verde-primario: #2b7a0b;    /* Verde naturaleza fuerte (para títulos) */
+    --verde-secundario: #5bb318;  /* Verde hoja brillante (para acentos y bordes) */
+    --verde-claro: #edf5e1;       /* Verde pastel muy suave para fondos destacados */
+    --texto-oscuro: #2d3436;      /* Gris muy oscuro para alta legibilidad */
+    --texto-mutado: #636e72;      /* Gris medio para textos secundarios */
+    --borde: #d1e2c4;             /* Verde grisáceo para líneas divisorias */
+    --sombra: rgba(43, 122, 11, 0.08); /* Sombra sutil con tinte verde */
 }
 
 /* ==========================================================================
-   Estilos Base
+   Estilos Base y Tipografía
    ========================================================================== */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background-color: var(--bg-principal);
     color: var(--texto-oscuro);
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 hr {
     border: 0;
     height: 1px;
     background-color: var(--borde);
-    margin: 30px auto;
+    margin: 35px auto;
     max-width: 900px;
 }
 
@@ -38,16 +38,16 @@ hr {
    ========================================================================== */
 header {
     background-color: var(--bg-tarjeta);
-    border-top: 5px solid var(--verde-principal);
+    border-top: 6px solid var(--verde-primario);
     border-bottom: 1px solid var(--borde);
-    padding: 30px 20px;
+    padding: 35px 20px;
     text-align: center;
-    box-shadow: 0 2px 10px var(--sombra);
+    box-shadow: 0 4px 10px var(--sombra);
 }
 
 header h1 {
     font-size: 22px;
-    color: var(--verde-principal);
+    color: var(--verde-primario);
     margin: 0 auto 15px auto;
     max-width: 850px;
     line-height: 1.4;
@@ -57,7 +57,7 @@ header h1 {
 header p {
     margin: 5px 0;
     color: var(--texto-mutado);
-    font-size: 15px;
+    font-size: 15.5px;
 }
 
 header p strong {
@@ -71,31 +71,32 @@ header p strong {
     max-width: 900px;
     margin: 30px auto;
     padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .content-card {
     background-color: var(--bg-tarjeta);
     border: 1px solid var(--borde);
-    border-radius: 8px;
-    padding: 25px 30px;
+    border-radius: 10px;
+    padding: 35px;
     box-shadow: 0 4px 15px var(--sombra);
     margin-bottom: 30px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .content-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.12);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(43, 122, 11, 0.12);
 }
 
 /* ==========================================================================
-   Tipografía y Encabezados
+   Títulos y Textos Internos
    ========================================================================== */
 h2 {
-    border-left: 5px solid var(--verde-acento);
-    padding-left: 12px;
-    font-size: 19px;
-    color: var(--verde-principal);
+    border-left: 5px solid var(--verde-secundario);
+    padding-left: 15px;
+    font-size: 20px;
+    color: var(--verde-primario);
     margin-top: 0;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -106,8 +107,8 @@ h3 {
     font-size: 17px;
     color: var(--texto-oscuro);
     margin-top: 25px;
-    margin-bottom: 10px;
-    border-bottom: 1px dashed var(--borde);
+    margin-bottom: 12px;
+    border-bottom: 2px solid var(--verde-claro);
     padding-bottom: 5px;
     display: inline-block;
 }
@@ -124,12 +125,12 @@ ul {
 }
 
 li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     text-align: justify;
 }
 
 li strong {
-    color: var(--verde-principal);
+    color: var(--verde-primario);
 }
 
 /* ==========================================================================
@@ -137,50 +138,51 @@ li strong {
    ========================================================================== */
 .card-header {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .card-header h1 {
-    font-size: 24px;
-    color: var(--verde-principal);
-    margin-top: 15px;
+    font-size: 26px;
+    color: var(--verde-primario);
+    margin-top: 20px;
 }
 
 .badge {
     display: inline-block;
-    background-color: var(--verde-acento);
+    background-color: var(--verde-secundario);
     color: white;
-    padding: 5px 12px;
+    padding: 6px 15px;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 13px;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-/* Grid de información (soporta la clase original del HTML: info-gird) */
+/* Grid de información (Respeta la clase 'info-gird' original) */
 .info-gird {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
     background-color: var(--verde-claro);
-    padding: 20px;
-    border-radius: 6px;
+    padding: 25px;
+    border-radius: 8px;
     border: 1px solid var(--borde);
 }
 
 .info-box h3 {
-    margin: 0 0 5px 0;
+    margin: 0 0 8px 0;
     font-size: 13px;
-    color: var(--verde-principal);
+    color: var(--verde-primario);
     text-transform: uppercase;
     border: none;
+    padding-bottom: 0;
 }
 
 .info-box p {
     margin: 0;
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 600;
     color: var(--texto-oscuro);
     text-align: left;
 }
@@ -190,40 +192,7 @@ li strong {
    ========================================================================== */
 .destacado {
     background: var(--verde-claro);
-    border-left: 4px solid var(--verde-principal);
-    border-radius: 0 6px 6px 0;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-.destacado h3 {
-    margin-top: 0;
-    color: var(--verde-principal);
-    border: none;
-}
-
-.keywords {
-    background-color: #f8fbf9;
-    border: 1px dashed var(--verde-acento);
-    padding: 15px;
-    border-radius: 6px;
-    margin-top: 20px;
-    font-size: 14.5px;
-}
-
-.keywords strong {
-    color: var(--verde-principal);
-}
-
-/* ==========================================================================
-   Pie de Página (Footer)
-   ========================================================================== */
-footer {
-    text-align: center;
+    border-left: 5px solid var(--verde-primario);
+    border-radius: 0 8px 8px 0;
     padding: 25px;
-    color: var(--texto-mutado);
-    font-size: 14px;
-    border-top: 1px solid var(--borde);
-    background-color: var(--bg-tarjeta);
-    margin-top: 50px;
-}
+    margin-top:
