@@ -1,21 +1,18 @@
 /* ==========================================================================
-   Variables de Color - Tema: PRAE y Educación Ambiental
+   Tema: PRAE y Educación Ambiental (Tonos Verdes y Limpios)
    ========================================================================== */
 :root {
-    --bg-principal: #f4f7f6;      /* Fondo general gris-verdoso muy claro y limpio */
-    --bg-tarjeta: #ffffff;        /* Fondo blanco para los paneles de contenido */
-    --verde-primario: #2b7a0b;    /* Verde naturaleza fuerte (para títulos) */
-    --verde-secundario: #5bb318;  /* Verde hoja brillante (para acentos y bordes) */
-    --verde-claro: #edf5e1;       /* Verde pastel muy suave para fondos destacados */
-    --texto-oscuro: #2d3436;      /* Gris muy oscuro para alta legibilidad */
-    --texto-mutado: #636e72;      /* Gris medio para textos secundarios */
-    --borde: #d1e2c4;             /* Verde grisáceo para líneas divisorias */
-    --sombra: rgba(43, 122, 11, 0.08); /* Sombra sutil con tinte verde */
+    --bg-principal: #f4f7f6;      
+    --bg-tarjeta: #ffffff;        
+    --verde-primario: #2b7a0b;    
+    --verde-secundario: #5bb318;  
+    --verde-claro: #edf5e1;       
+    --texto-oscuro: #2d3436;      
+    --texto-mutado: #636e72;      
+    --borde: #d1e2c4;             
+    --sombra: rgba(43, 122, 11, 0.08); 
 }
 
-/* ==========================================================================
-   Estilos Base y Tipografía
-   ========================================================================== */
 body {
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background-color: var(--bg-principal);
@@ -33,9 +30,6 @@ hr {
     max-width: 900px;
 }
 
-/* ==========================================================================
-   Cabecera (Header)
-   ========================================================================== */
 header {
     background-color: var(--bg-tarjeta);
     border-top: 6px solid var(--verde-primario);
@@ -43,6 +37,9 @@ header {
     padding: 35px 20px;
     text-align: center;
     box-shadow: 0 4px 10px var(--sombra);
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
 header h1 {
@@ -64,9 +61,6 @@ header p strong {
     color: var(--texto-oscuro);
 }
 
-/* ==========================================================================
-   Contenedor Principal y Tarjetas
-   ========================================================================== */
 .main-content, section {
     max-width: 900px;
     margin: 30px auto;
@@ -81,17 +75,8 @@ header p strong {
     padding: 35px;
     box-shadow: 0 4px 15px var(--sombra);
     margin-bottom: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.content-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(43, 122, 11, 0.12);
-}
-
-/* ==========================================================================
-   Títulos y Textos Internos
-   ========================================================================== */
 h2 {
     border-left: 5px solid var(--verde-secundario);
     padding-left: 15px;
@@ -113,36 +98,25 @@ h3 {
     display: inline-block;
 }
 
-p {
-    margin-top: 0;
-    margin-bottom: 15px;
+p, li {
     text-align: justify;
-}
-
-ul {
-    margin-bottom: 20px;
-    padding-left: 20px;
 }
 
 li {
     margin-bottom: 12px;
-    text-align: justify;
 }
 
 li strong {
     color: var(--verde-primario);
 }
 
-/* ==========================================================================
-   Portada / Elementos de Información
-   ========================================================================== */
 .card-header {
     text-align: center;
     margin-bottom: 30px;
 }
 
 .card-header h1 {
-    font-size: 26px;
+    font-size: 24px;
     color: var(--verde-primario);
     margin-top: 20px;
 }
@@ -159,7 +133,6 @@ li strong {
     letter-spacing: 1px;
 }
 
-/* Grid de información (Respeta la clase 'info-gird' original) */
 .info-gird {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -176,7 +149,6 @@ li strong {
     color: var(--verde-primario);
     text-transform: uppercase;
     border: none;
-    padding-bottom: 0;
 }
 
 .info-box p {
@@ -187,12 +159,43 @@ li strong {
     text-align: left;
 }
 
-/* ==========================================================================
-   Bloques Destacados y Palabras Clave
-   ========================================================================== */
 .destacado {
     background: var(--verde-claro);
     border-left: 5px solid var(--verde-primario);
     border-radius: 0 8px 8px 0;
     padding: 25px;
-    margin-top:
+    margin-top: 25px;
+}
+
+.destacado h3 {
+    margin-top: 0;
+    color: var(--verde-primario);
+    border: none;
+}
+
+.keywords {
+    background-color: #fafdf7;
+    border: 1px dashed var(--verde-secundario);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+.keywords strong {
+    color: var(--verde-primario);
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--texto-mutado);
+    font-size: 14px;
+    border-top: 1px solid var(--borde);
+    background-color: var(--bg-tarjeta);
+    margin-top: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
