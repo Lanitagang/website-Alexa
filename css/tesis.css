@@ -1,13 +1,230 @@
 *{
-padding:0;
-marging:0;
+==========================================================================
+   Variables de Color - Tema Ambiental y AcadÃ©mico
+   ========================================================================== */
+:root {
+    --bg-principal: #f4f9f5;      /* Fondo general: un verde-gris muy claro y limpio */
+    --bg-tarjeta: #ffffff;        /* Fondo de las tarjetas: blanco puro */
+    --verde-principal: #2e7d32;   /* Verde bosque para tÃ­tulos y acentos principales */
+    --verde-acento: #4caf50;      /* Verde vibrante para detalles o botones */
+    --verde-claro: #e8f5e9;       /* Verde muy pÃ¡lido para fondos de bloques destacados */
+    --texto-oscuro: #2c3e50;      /* Gris azulado oscuro para el texto principal (mejor legibilidad que el negro) */
+    --texto-mutado: #607d8b;      /* Gris medio para subtÃ­tulos o metadatos */
+    --borde: #c8e6c9;             /* Verde suave para los bordes */
+    --sombra: rgba(46, 125, 50, 0.08); /* Sombra con un sutil tono verde */
 }
 
-body{
-background-color:#5528D1;
+/* ==========================================================================
+   Estilos Base
+   ========================================================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-principal);
+    color: var(--texto-oscuro);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
-p{
-font-size:30px;
-color:#FFFFFF;
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--borde);
+    margin: 30px auto;
+    max-width: 900px;
+}
+
+/* ==========================================================================
+   Cabecera (Header)
+   ========================================================================== */
+header {
+    background-color: var(--bg-tarjeta);
+    border-top: 5px solid var(--verde-principal);
+    border-bottom: 1px solid var(--borde);
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px var(--sombra);
+}
+
+header h1 {
+    font-size: 22px;
+    color: var(--verde-principal);
+    margin: 0 auto 15px auto;
+    max-width: 850px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+header p {
+    margin: 5px 0;
+    color: var(--texto-mutado);
+    font-size: 15px;
+}
+
+header p strong {
+    color: var(--texto-oscuro);
+}
+
+/* ==========================================================================
+   Contenedor Principal y Tarjetas
+   ========================================================================== */
+.main-content, section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.content-card {
+    background-color: var(--bg-tarjeta);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 15px var(--sombra);
+    margin-bottom: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 125, 50, 0.12);
+}
+
+/* ==========================================================================
+   TipografÃ­a y Encabezados
+   ========================================================================== */
+h2 {
+    border-left: 5px solid var(--verde-acento);
+    padding-left: 12px;
+    font-size: 19px;
+    color: var(--verde-principal);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+h3 {
+    font-size: 17px;
+    color: var(--texto-oscuro);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed var(--borde);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+li strong {
+    color: var(--verde-principal);
+}
+
+/* ==========================================================================
+   Portada / Elementos de InformaciÃ³n
+   ========================================================================== */
+.card-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.card-header h1 {
+    font-size: 24px;
+    color: var(--verde-principal);
+    margin-top: 15px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: var(--verde-acento);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Grid de informaciÃ³n (soporta la clase original del HTML: info-gird) */
+.info-gird {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    background-color: var(--verde-claro);
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid var(--borde);
+}
+
+.info-box h3 {
+    margin: 0 0 5px 0;
+    font-size: 13px;
+    color: var(--verde-principal);
+    text-transform: uppercase;
+    border: none;
+}
+
+.info-box p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--texto-oscuro);
+    text-align: left;
+}
+
+/* ==========================================================================
+   Bloques Destacados y Palabras Clave
+   ========================================================================== */
+.destacado {
+    background: var(--verde-claro);
+    border-left: 4px solid var(--verde-principal);
+    border-radius: 0 6px 6px 0;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.destacado h3 {
+    margin-top: 0;
+    color: var(--verde-principal);
+    border: none;
+}
+
+.keywords {
+    background-color: #f8fbf9;
+    border: 1px dashed var(--verde-acento);
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-size: 14.5px;
+}
+
+.keywords strong {
+    color: var(--verde-principal);
+}
+
+/* ==========================================================================
+   Pie de PÃ¡gina (Footer)
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 25px;
+    color: var(--texto-mutado);
+    font-size: 14px;
+    border-top: 1px solid var(--borde);
+    background-color: var(--bg-tarjeta);
+    margin-top: 50px;
 }
